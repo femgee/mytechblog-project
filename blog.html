@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - TechInsights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Tech<span>Insights</span></a>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="latest tech news.html">Latest Tech News</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="blog-hero-content">
+                <h1>Tech Insights Blog</h1>
+                <p>Deep dives, tutorials, and expert perspectives on the technologies shaping our future</p>
+                <div class="blog-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Articles</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Expert Writers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2M+</span>
+                        <span class="stat-label">Monthly Readers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Search & Filters -->
+    <section class="blog-filters">
+        <div class="container">
+            <div class="filters-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search articles, tutorials, guides..." id="blogSearch">
+                </div>
+                <!-- In the filter options section -->
+<div class="filter-options">
+    <select class="category-filter" id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="web-dev">Web Development</option>
+        <option value="ai-ml">AI & Machine Learning</option>
+        <option value="cybersecurity">Cybersecurity</option>
+        <option value="mobile">Mobile Development</option>
+        <option value="cloud">Cloud Computing</option>
+        <option value="devops">DevOps</option>
+    </select>
+    <select class="sort-filter" id="sortFilter">
+        <option value="newest">Newest First</option>
+        <option value="popular">Most Popular</option>
+        <option value="trending">Trending</option>
+    </select>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Blog Content -->
+    <main class="blog-main">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- Main Content -->
+                <div class="blog-content">
+                    <!-- Featured Post -->
+                    <section class="featured-blog-post">
+                        <div class="featured-badge">
+                            <i class="fas fa-star"></i>
+                            Featured Post
+                        </div>
+                        <article class="featured-post">
+                            <div class="featured-image">
+                                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Web Development">
+                                <div class="post-category web-dev">Web Development</div>
+                            </div>
+                            <div class="featured-content">
+                                <div class="post-meta">
+                                    <div class="author">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">
+                                        <div class="author-info">
+                                            <span class="author-name">John Doe</span>
+                                            <span class="post-date">June 15, 2023 • 8 min read</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span class="views"><i class="far fa-eye"></i> 24.5K</span>
+                                        <span class="comments"><i class="far fa-comment"></i> 142</span>
+                                    </div>
+                                </div>
+                                <h2>The Complete Guide to React 18 Features and Concurrent Rendering</h2>
+                                <p class="post-excerpt">Explore the groundbreaking features of React 18, including concurrent rendering, automatic batching, and the new startTransition API. Learn how these improvements can dramatically enhance your application's performance and user experience.</p>
+                                <div class="post-tags">
+                                    <span class="tag">#React</span>
+                                    <span class="tag">#JavaScript</span>
+                                    <span class="tag">#WebDev</span>
+                                    <span class="tag">#Frontend</span>
+                                </div>
+                                <a href="#" class="read-more-btn">
+                                    Read Full Article
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Blog Posts Grid -->
+                    <section class="blog-posts">
+                        <div class="section-header">
+                            <h2 class="section-title">Latest Articles</h2>
+                            <div class="view-toggle">
+                                <button class="view-btn active" data-view="grid">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="view-btn" data-view="list">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="posts-grid" id="postsGrid">
+                            <!-- Blog Post 1 -->
+                            <article class="blog-post-card" data-category="ai-ml">
+                                <div class="post-image">
+                                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="AI Programming">
+                                    <div class="post-category ai-ml">AI & ML</div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">June 14, 2023</span>
+                                        <span class="read-time">6 min read</span>
+                                    </div>
+                                    <h3>Getting Started with Machine Learning: A Practical Python Tutorial</h3>
+                                    <p class="post-excerpt">Learn how to build your first machine learning model using Python and scikit-learn. This step-by-step guide covers data preprocessing, model training, and evaluation.</p>
+                                    <div class="post-footer">
+                                        <div class="author-small">
+                                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar-small">
+                                            <span>Sarah Chen</span>
+                                        </div>
+                                        <div class="post-stats-small">
+                                            <span><i class="far fa-eye"></i> 18.2K</span>
+                                            <span><i class="far fa-comment"></i> 89</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Blog Post 2 -->
+                            <article class="blog-post-card" data-category="cybersecurity">
+                                <div class="post-image">
+                                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Cybersecurity">
+                                    <div class="post-category cybersecurity">Cybersecurity</div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">June 12, 2023</span>
+                                        <span class="read-time">5 min read</span>
+                                    </div>
+                                    <h3>Zero Trust Architecture: Implementing Modern Security Practices</h3>
+                                    <p class="post-excerpt">Discover how Zero Trust security models can protect your organization from modern threats. Learn implementation strategies and best practices.</p>
+                                    <div class="post-footer">
+                                        <div class="author-small">
+                                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar-small">
+                                            <span>Mike Johnson</span>
+                                        </div>
+                                        <div class="post-stats-small">
+                                            <span><i class="far fa-eye"></i> 15.7K</span>
+                                            <span><i class="far fa-comment"></i> 67</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Blog Post 3 -->
+                            <article class="blog-post-card" data-category="cloud">
+                                <div class="post-image">
+                                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Cloud Computing">
+                                    <div class="post-category cloud">Cloud Computing</div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">June 10, 2023</span>
+                                        <span class="read-time">7 min read</span>
+                                    </div>
+                                    <h3>Serverless Architecture: Building Scalable Applications with AWS Lambda</h3>
+                                    <p class="post-excerpt">A comprehensive guide to building and deploying serverless applications. Learn about cost optimization, monitoring, and best practices.</p>
+                                    <div class="post-footer">
+                                        <div class="author-small">
+                                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar-small">
+                                            <span>David Chen</span>
+                                        </div>
+                                        <div class="post-stats-small">
+                                            <span><i class="far fa-eye"></i> 22.1K</span>
+                                            <span><i class="far fa-comment"></i> 124</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Blog Post 4 -->
+                            <article class="blog-post-card" data-category="mobile">
+                                <div class="post-image">
+                                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Mobile Development">
+                                    <div class="post-category mobile">Mobile Development</div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">June 8, 2023</span>
+                                        <span class="read-time">4 min read</span>
+                                    </div>
+                                    <h3>Flutter vs React Native: Choosing the Right Cross-Platform Framework</h3>
+                                    <p class="post-excerpt">Compare Flutter and React Native for your next mobile project. We break down performance, development experience, and ecosystem.</p>
+                                    <div class="post-footer">
+                                        <div class="author-small">
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar-small">
+                                            <span>Emily Rodriguez</span>
+                                        </div>
+                                        <div class="post-stats-small">
+                                            <span><i class="far fa-eye"></i> 19.8K</span>
+                                            <span><i class="far fa-comment"></i> 156</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Blog Post 5 -->
+                            <article class="blog-post-card" data-category="devops">
+                                <div class="post-image">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="DevOps">
+                                    <div class="post-category devops">DevOps</div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">June 5, 2023</span>
+                                        <span class="read-time">8 min read</span>
+                                    </div>
+                                    <h3>Docker and Kubernetes: Containerizing Your Applications for Scale</h3>
+                                    <p class="post-excerpt">Learn how to containerize your applications and orchestrate them with Kubernetes. Includes practical examples and deployment strategies.</p>
+                                    <div class="post-footer">
+                                        <div class="author-small">
+                                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar-small">
+                                            <span>Alex Thompson</span>
+                                        </div>
+                                        <div class="post-stats-small">
+                                            <span><i class="far fa-eye"></i> 25.3K</span>
+                                            <span><i class="far fa-comment"></i> 178</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Blog Post 6 -->
+                            <article class="blog-post-card" data-category="web-dev">
+                                <div class="post-image">
+                                    <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Web Performance">
+                                    <div class="post-category web-dev">Web Development</div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">June 3, 2023</span>
+                                        <span class="read-time">5 min read</span>
+                                    </div>
+                                    <h3>Web Performance Optimization: Techniques for Faster Loading Times</h3>
+                                    <p class="post-excerpt">Discover advanced techniques to optimize your website's performance. From code splitting to image optimization, learn how to speed up your site.</p>
+                                    <div class="post-footer">
+                                        <div class="author-small">
+                                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar-small">
+                                            <span>Lisa Wang</span>
+                                        </div>
+                                        <div class="post-stats-small">
+                                            <span><i class="far fa-eye"></i> 21.6K</span>
+                                            <span><i class="far fa-comment"></i> 134</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Load More -->
+                        <div class="load-more-container">
+                            <button class="load-more-btn" id="loadMorePosts">
+                                <i class="fas fa-plus"></i>
+                                Load More Articles
+                            </button>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- About Blog -->
+                    <div class="sidebar-widget">
+                        <h3>About This Blog</h3>
+                        <p>Welcome to TechInsights Blog, where industry experts share their knowledge, experiences, and insights about the latest technologies and development practices.</p>
+                        <a href="about us.html" class="about-link">Learn More About Us</a>
+                    </div>
+
+                    <!-- Popular Tags -->
+                    <div class="sidebar-widget">
+                        <h3>Popular Tags</h3>
+                        <div class="tags-cloud">
+                            <a href="#" class="tag">#JavaScript</a>
+                            <a href="#" class="tag">#Python</a>
+                            <a href="#" class="tag">#React</a>
+                            <a href="#" class="tag">#NodeJS</a>
+                            <a href="#" class="tag">#AWS</a>
+                            <a href="#" class="tag">#Docker</a>
+                            <a href="#" class="tag">#Kubernetes</a>
+                            <a href="#" class="tag">#MachineLearning</a>
+                            <a href="#" class="tag">#Cybersecurity</a>
+                            <a href="#" class="tag">#WebDevelopment</a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="sidebar-widget">
+                        <div class="newsletter-widget">
+                            <h3>Stay Updated</h3>
+                            <p>Get the latest articles and tutorials delivered to your inbox</p>
+                            <form class="blog-newsletter">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Popular Posts -->
+                    <div class="sidebar-widget">
+                        <h3>Popular Posts</h3>
+                        <div class="popular-posts">
+                            <div class="popular-post">
+                                <div class="popular-image">
+                                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Popular Post">
+                                </div>
+                                <div class="popular-content">
+                                    <h4>Mastering TypeScript: Advanced Types and Patterns</h4>
+                                    <span class="popular-views">45.2K views</span>
+                                </div>
+                            </div>
+                            <div class="popular-post">
+                                <div class="popular-image">
+                                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Popular Post">
+                                </div>
+                                <div class="popular-content">
+                                    <h4>Building REST APIs with Node.js and Express</h4>
+                                    <span class="popular-views">38.7K views</span>
+                                </div>
+                            </div>
+                            <div class="popular-post">
+                                <div class="popular-image">
+                                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Popular Post">
+                                </div>
+                                <div class="popular-content">
+                                    <h4>CSS Grid vs Flexbox: When to Use Which</h4>
+                                    <span class="popular-views">42.1K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TechInsights</h3>
+                    <p>Your trusted source for technology news, reviews, and insights.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about us.html">About Us</a></li>
+                        <li><a href="latest news.html">Latest Tech News</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley</li>
+                        <li><i class="fas fa-envelope"></i> info@techinsights.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 TechInsights. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Go to Top Button -->
+    <div class="go-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
